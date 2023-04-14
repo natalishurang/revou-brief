@@ -1,0 +1,67 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Body*/
+
+/*Responsif*/
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+    .menu {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+/* Style header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 15px 30px;
+    border: 2px solid #35a5b9;
+}
+/*Logo*/
+.logo {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+/*Style menu navigation*/
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+nav div a {
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(19, 18, 18);
+    border: 2px solid;
+    background-color: rgb(126, 211, 233);
+    border-radius: 5px;
+}
+/*Style hallo message*/
+main h2 {
+    margin: 20px 10px 5px 10px;
+    padding-left: 50px;
+}
+/*Style main*/
+.container-home {
+    border: 1px solid #35a5b9;
+}
+/*Style form*/
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    padding: 20px 50px;
+}
+.form-section1 {
+    justify-content: flex-start;
+}
+/*Button Delete*/

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/brief_revou/home_page/index.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="header-wrapper">
+        <!--Logo-->
+        <div class="logo-image">
+            <img class="logo" alt="natalis-logo" src="/brief_revou/assets/logo.png" />
+        </div>
+        <!--Menu button-->
+        <nav class="menu">
+            <div>
+                <!--Button home-->
+                <a  class="home" 
+                    onclick="showHome()" 
+                    href="#"
+                    id="home-page"
+                    >Home
+                </a>
+                <!--Button My profile-->
+                <a  class="profile" 
+                    onclick="showProfile()" 
+                    href="#"
+                    id="profile"
+                    >My Profile
+                </a>
+                <!--Button Portofolio-->
+                <a  class="achievement" 
+                    onclick="showAchievement()" 
+                    href="#"
+                    id="achievement"
+                    >Achievement
+                </a>
+                <!--Button Message Us-->
+                <a  class="message-us" 
+                    onclick="showMessageUs()" 
+                    href="#"
+                    id="message-us"
+                    >Message Us
+                </a>
+            </div>
+        </nav>
+    </header>
+        <!--Main-->
+    <main>
+        <!--Bagian 1-->
+        <div class="container-home">
+            <h2>Hi <span id="name-hallo"></span>, Welcome To Website !</h2>
+                <!--Pengisian dan output form-->
+            <div class="form-section">
+                <form
+                    class="form-section1"
+                    name="message-form"
+                    onsubmit="return validateform()"
+                >
+                    Nama: <input placeholder="Nama" type="text" name="name-input" /><br>
+
+                    Tanggal Lahir: <input type="date" name="birthday" /><br>
+
+                    Jenis Kelamin:
+                    <input type="radio" id="male" name="gender" value="Laki-laki" />
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan" />
+                    <label for="female">Perempuan</label><br>
+
+                    Pesan:
+                    <textarea placeholder="Pesan" name="messages"></textarea><br>
+
+                    <input type="submit" value="Submit" />
+                </form>
+                <!--Tabel output untuk hasil submit-->
+                <div class="output-form">
+                   <table>
+                    <tr>
+                        <th><strong>Nama</strong></th>
+                        <th><strong>Tanggal Lahir</strong></th>
+                        <th><strong>Jenis Kelamin</strong></th>
+                        <th><strong>Pesan</strong></th>
+                        <th><strong>Profile</strong></th>
+                        <th><strong>Delete</strong></th>
+                    </tr>
+                    <tr>
+                        <td><span id="sender-name-input"></span></td>
+                        <td><span id="birthday"></span></td>
+                        <td><span id="gender"></span></td>
+                        <td><span id="messages"></span></td>
+                        <td>
+                            <a  class="profile" 
+                                onclick="showProfile()" 
+                                href="#"
+                                id="profile"
+                                >Klik Disini
+                            </a>
+                        </td>
+                        <td>
+                            <button type="delete" class="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                   </table>
+                </div>
+            </div>
+        </div>
+        <!--Bagian 2-->
+        <div class="container-achievement">
+            <b>Our Facilitation</b>
+        </div>
+        <!--Bagian 3-->
+        <div class="container-message">
+            <b>Message Us</b>
+            <!--Message Us-->
+            <div class="form-section">
+                <form
+                    class=""
+                    name="message-form"
+                    onsubmit="return validateform()"
+                >
+                    Nama: <input placeholder="Nama" type="text" name="name-input" /><br>
+
+                    Tanggal Lahir: <input type="date" name="birthday" /><br>
+
+                    Jenis Kelamin:
+                    <input type="radio" id="male" name="gender" value="Laki-laki" />
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan" />
+                    <label for="female">Perempuan</label><br>
+
+                    Pesan:
+                    <textarea placeholder="Pesan" name="messages"></textarea><br>
+
+                    <input type="submit" value="Submit" />
+                </form>
+                <!--Output untuk hasil submit-->
+                <div class="output-message">
+                    <p>Nama: <span id="sender-name-input"></span></p>
+                    <p>Tanggal Lahir: <span id="sender-birthday"></span></p>
+                    <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                    <p>Pesan: <span id="sender-messages"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+</body>
+</html>
