@@ -3,65 +3,154 @@
     margin: 0;
     padding: 0;
 }
+
 /*Body*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
 
 /*Responsif*/
 @media screen and (max-width: 600px) {
-    header {
+    .header-wrapper {
         flex-direction: column;
     }
-    .menu {
+    .menu , a {
+        display: flex;
         width: 100%;
+    }
+    .logo {
+        margin-bottom: 14px;
+    }
+    .form-section {
         flex-direction: column;
+    }
+    .output-message {
+        margin-top: 10px;
     }
 }
+
 /* Style header*/
-header {
+.header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5px;
-    padding: 15px 30px;
-    border: 2px solid #35a5b9;
+    padding: 9px 20px;
+    border-bottom: 2px solid rgb(252, 33, 33);
 }
-/*Logo*/
-.logo {
-    display: flex;
-    width: 50px;
-    height: 50px;
+.header-wrapper > .logo {
+    height: 40px;
+    width: auto;
 }
+
 /*Style menu navigation*/
-.menu {
+nav > .menu {
     display: flex;
-    justify-content: flex-end;
 }
-nav div a {
-    padding: 5px;
-    text-align: center;
+nav > .menu > a {
+    display: flex;
+    padding: 8px 16px;
     text-decoration: none;
-    color: rgb(19, 18, 18);
-    border: 2px solid;
-    background-color: rgb(126, 211, 233);
-    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(121, 166, 180);
+    border: 1px solid rgb(252, 33, 33);
+    cursor: pointer;
+    transition: 0.3s background-color ease-out;
 }
-/*Style hallo message*/
-main h2 {
-    margin: 20px 10px 5px 10px;
-    padding-left: 50px;
+nav > div > a:hover {
+    background-color: rgb(252, 33, 33);
 }
+
 /*Style main*/
-.container-home {
-    border: 1px solid #35a5b9;
+.main-content {
+    padding: 16px 24px;
 }
+.say-hi {
+    font-style: normal;
+}
+.main-content > p {
+    margin-bottom: 10px;
+}
+
+/*Style slideshow*/
+.slideshow-img > .img-slideshow {
+    width: 100%;
+    max-height: 578px;
+}
+.slideshow-img > button {
+    background-color: rgb(121, 166, 180);
+}
+.slideshow-img > button:hover {
+    background-color: rgb(252, 33, 33);
+}
+
+/*Style our facilitation*/
+.achievement {
+    margin: 30px 0px;
+    padding: 10px 0px;
+    border-top: solid 2px rgb(252, 33, 33);
+    border-bottom: solid 2px rgb(252, 33, 33);
+}
+.achievement > h3 {
+    padding-bottom: 20px;
+}
+.achievement > .facilitation {
+    display: flex;
+    align-items: center;
+}
+
+/*Style image facilitation*/
+.image-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.image-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*Style form*/
+.container-message {
+    display: inline-grid;
+    width: 100%;
+}
+.container-message > h3 {
+    margin: 5px 0px;
+    padding-top: 10px;
+}
 .form-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 10px;
-    padding: 20px 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
-.form-section1 {
-    justify-content: flex-start;
+.form-section > .label-input {
+    padding: 30%;
+    display: grid;
 }
-/*Button Delete*/
+
+/*Style output message*/
+.output-message {
+    display: grid;
+    justify-content: start;
+    border: solid 1px;
+    margin: 5px;
+    padding: 5%;
+}
+
+/*Footer*/
+footer > p {
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid 2px rgb(252, 33, 33);
+    border-bottom: solid 10px rgb(252, 33, 33);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+

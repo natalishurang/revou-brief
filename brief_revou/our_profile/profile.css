@@ -1,0 +1,87 @@
+/*Css Reset*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Body*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Responsif*/
+@media screen and (max-width: 600px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+    .menu , a {
+        display: flex;
+        width: 100%;
+    }
+    .logo {
+        margin-bottom: 14px;
+    }
+    .form-section {
+        flex-direction: column;
+    }
+    .output-message {
+        margin-top: 10px;
+    }
+}
+
+/* Style header*/
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 20px;
+    border-bottom: 2px solid rgb(252, 33, 33);
+}
+.header-wrapper > .logo {
+    height: 40px;
+    width: auto;
+}
+
+/*Style menu navigation*/
+nav > .menu {
+    display: flex;
+}
+nav > .menu > a {
+    display: flex;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(121, 166, 180);
+    border: 1px solid rgb(252, 33, 33);
+    cursor: pointer;
+    transition: 0.3s background-color ease-out;
+}
+nav > div > a:hover {
+    background-color: rgb(252, 33, 33);
+}
+
+/*Main*/
+.main-profile > h2 {
+    margin: 20px 0px 20px 20px;
+}
+.main-profile > img {
+    display: flex;
+    margin: 0px 20px 20px 20px;
+    width: 100%;
+}
+.main-profile > p {
+    display: flex;
+    text-align: justify;
+    margin: 0px 20px 20px 20px;
+
+}
+
+/*Footer*/
+footer > p {
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid 2px rgb(252, 33, 33);
+    border-bottom: solid 10px rgb(252, 33, 33);
+    padding: 15px;
+    margin-bottom: 10px;
+}

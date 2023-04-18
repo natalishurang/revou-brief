@@ -4,163 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/brief_revou/home_page/index.css">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/revou-brief/brief_revou/home_page/index.css">
 </head>
 <body>
     <!--Header-->
     <header class="header-wrapper">
         <!--Logo-->
-        <div class="logo-image">
-            <img class="logo" alt="natalis-logo" src="/brief_revou/assets/logo.png" />
-        </div>
+        <img class="logo" alt="natalis-logo" src="/revou-brief/brief_revou/assets/logo-revou.png" />
         <!--Menu button-->
-        <nav class="menu">
-            <div>
+        <nav>
+            <div class="menu">
                 <!--Button home-->
                 <a  class="home" 
                     onclick="showHome()" 
                     href="#"
                     id="home-page"
-                    >Home
+                    />Home
                 </a>
                 <!--Button My profile-->
                 <a  class="profile" 
                     onclick="showProfile()" 
-                    href="#"
+                    href="/revou-brief/brief_revou/our_profile/profile.html"
                     id="profile"
-                    >My Profile
+                    />My Profile
                 </a>
                 <!--Button Portofolio-->
                 <a  class="achievement" 
                     onclick="showAchievement()" 
                     href="#"
                     id="achievement"
-                    >Achievement
+                    />Achievement
                 </a>
                 <!--Button Message Us-->
                 <a  class="message-us" 
                     onclick="showMessageUs()" 
                     href="#"
                     id="message-us"
-                    >Message Us
+                    />Message Us
                 </a>
             </div>
         </nav>
     </header>
         <!--Main-->
-    <main>
-        <!--Bagian 1-->
-        <div class="container-home">
+    <main class="main-content">
+        <!--Bagian Awal-->
+        <div class="say-hi">
             <h2>Hi <span id="name-hallo"></span>, Welcome To Website !</h2>
-                <!--Pengisian dan output form-->
-            <div class="form-section">
-                <form
-                    class="form-section1"
-                    name="message-form"
-                    onsubmit="return validateform()"
-                >
-                    Nama: <input placeholder="Nama" type="text" name="name-input" /><br>
-
-                    Tanggal Lahir: <input type="date" name="birthday" /><br>
-
-                    Jenis Kelamin:
-                    <input type="radio" id="male" name="gender" value="Laki-laki" />
-                    <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan" />
-                    <label for="female">Perempuan</label><br>
-
-                    Pesan:
-                    <textarea placeholder="Pesan" name="messages"></textarea><br>
-
-                    <input type="submit" value="Submit" />
-                </form>
-                <!--Tabel output untuk hasil submit-->
-                <div class="output-form">
-                   <table>
-                    <tr>
-                        <th><strong>Nama</strong></th>
-                        <th><strong>Tanggal Lahir</strong></th>
-                        <th><strong>Jenis Kelamin</strong></th>
-                        <th><strong>Pesan</strong></th>
-                        <th><strong>Profile</strong></th>
-                        <th><strong>Delete</strong></th>
-                    </tr>
-                    <tr>
-                        <td><span id="sender-name-input"></span></td>
-                        <td><span id="birthday"></span></td>
-                        <td><span id="gender"></span></td>
-                        <td><span id="messages"></span></td>
-                        <td>
-                            <a  class="profile" 
-                                onclick="showProfile()" 
-                                href="#"
-                                id="profile"
-                                >Klik Disini
-                            </a>
-                        </td>
-                        <td>
-                            <button type="delete" class="delete-button">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                   </table>
+        </div>
+        <!--Script say-hi-->
+        <!--<script>
+            var name = prompt("Masukan nama kamu");
+            document.getElementById("name-hallo").innerText = name;
+        </script>-->
+        <p>Ini adalah website belajar</p>
+        <!--Image slideshow-->
+        <div class="slideshow-img">
+            <img
+              class="img-slideshow"
+              src="https://s1.1zoom.me/big0/577/USA_Scenery_Fields_Avery_North_Carolina_Hill_563623_1280x578.jpg"
+            />
+            <img
+              class="img-slideshow"
+              src="https://s1.1zoom.me/big0/903/Belgium_Castles_Panorama_Mortsel_Castle_Cantecroy_606961_1280x578.jpg"
+            />
+            <img
+              class="img-slideshow"
+              src="https://s1.1zoom.me/big0/691/Switzerland_Mountains_Scenery_Alps_Clouds_599885_1280x578.jpg"
+            />
+            <img
+              class="img-slideshow"
+              src="https://s1.1zoom.me/big0/544/Germany_Houses_Greetsiel_Design_Mansion_Fence_568503_1280x578.jpg"
+            />
+            <img
+              class="img-slideshow"
+              src="https://s1.1zoom.me/big0/335/Italy_Lake_Mountains_448908.jpg"
+            />
+            <img
+              class="img-slideshow"
+              src="https://s1.1zoom.me/big0/162/USA_Parks_Rivers_Sunrises_and_sunsets_Scenery_Dead_600481_1280x578.jpg"
+            />
+            <button onclick="plusDivs(-1)">Previous</button>
+            <button onclick="plusDivs(1)">Next</button>
+        </div>
+          <!--Script slideshow-->
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+            //Function
+                function plusDivs(n) {
+                showDivs((slideIndex += n));
+                }
+            //Validation
+                function showDivs(n) {
+                var i;
+                var imgList = document.getElementsByClassName("img-slideshow");
+                if (n > imgList.length) slideIndex = 1;
+                else if (n < 1) slideIndex = imgList.length;
+        
+                for (i = 0; i < imgList.length; i++) {
+                    imgList[i].style.display = "none";
+                }
+        
+                imgList[slideIndex - 1].style.display = "block";
+                }
+            //Slide speed
+                setInterval(() => {
+                plusDivs(1);
+                }, 10000);
+            </script>
+        <!--Bagian Tengah-->
+        <div class="achievement">
+            <h3>Our Facilitation</h3>
+            <div class="faciltation"
+            style="display: flex; justify-content: space-evenly;"
+            />
+                <div class="image-1">
+                    <img class="image" src="/revou-brief/brief_revou/assets/gambar 1.jpeg" alt="Mentor" 
+                    style="width: 100px; height: 100px; border-radius: 100%;"
+                    />
+                    <p>Profesional Teacher</p>
+                </div>
+                <div class="image-2">
+                    <img class="image" src="/revou-brief/brief_revou/assets/gambar 2.jpg" alt="Kerjasama"
+                    style="width: 100px; height: 100px; border-radius: 100%;"
+                    />
+                    <p>Classroom</p>
+                </div>
+                <div class="image-3">
+                    <img class="image" src="/revou-brief/brief_revou/assets/gambar 3.jpg" alt="Karir"
+                    style="width: 100px; height: 100px; border-radius: 100%;"
+                    />
+                    <p>Spot Field</p>
                 </div>
             </div>
         </div>
-        <!--Bagian 2-->
-        <div class="container-achievement">
-            <b>Our Facilitation</b>
-        </div>
-        <!--Bagian 3-->
+        <!--Bagian Akhir-->
         <div class="container-message">
-            <b>Message Us</b>
+            <h3>Message Us</h3>
             <!--Message Us-->
             <div class="form-section">
-                <form
-                    class=""
-                    name="message-form"
-                    onsubmit="return validateform()"
-                >
-                    Nama: <input placeholder="Nama" type="text" name="name-input" /><br>
-
-                    Tanggal Lahir: <input type="date" name="birthday" /><br>
-
-                    Jenis Kelamin:
-                    <input type="radio" id="male" name="gender" value="Laki-laki" />
-                    <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan" />
-                    <label for="female">Perempuan</label><br>
-
-                    Pesan:
-                    <textarea placeholder="Pesan" name="messages"></textarea><br>
-
-                    <input type="submit" value="Submit" />
+                <form name="form-message" onsubmit="return validateForm()" />
+                <!--Input-->
+                    <div class="label-input" />
+                        <label for="input-name">Nama :</label />    
+                            <input id="input-name" placeholder="Nama" type="text" name="name-input" required /><br />
+                        <label for="birth-date">Tanggal Lahir :</label>
+                            <input type="date" id="birth-date" name="birthday" required /><br />
+                        <label for="gender-">Jenis Kelamin :</label>
+                            <div class="gender--" id="gender-">
+                                <input type="radio" id="male" name="gender" value="Laki-laki" required />
+                                <label for="male">Laki-laki</label><br />
+                                <input type="radio" id="female" name="gender" value="Perempuan" required />
+                                <label for="female">Perempuan</label><br />
+                            </div>
+                        <label for="messages-">Pesan :</label>
+                            <textarea placeholder="Pesan" name="messages" required></textarea><br />
+                    </div>
+                <!--Button submit-->    
+                    <input class="submit-button" type="submit" value="Submit" />
                 </form>
-                <!--Output untuk hasil submit-->
+                <!--Script form message-->
+                <script>
+                    //Function var
+                    function validateForm() {
+                      var name = document.forms["form-message"]["name-input"].value;
+                      var date = document.forms["form-message"]["birthday"].value;
+                      var gender = document.forms["form-message"]["gender"].value;
+                      var messages = document.forms["form-message"]["messages"].value;
+                    //Input Validation
+                      if (name == "" || date == "" || gender == "" || messages == "") {
+                        alert("Pastikan tidak ada input yang kosong !");
+                        return false;
+                      }
+                    //Output validation
+                      document.getElementById("sender-name-input").innerText = name;
+                      document.getElementById("sender-birthday").innerText = date;
+                      document.getElementById("sender-gender").innerText = gender;
+                      document.getElementById("sender-messages").innerText = messages;
+                      return false;
+                    }
+                </script>
+                <!--Output untuk hasil submit message-->
                 <div class="output-message">
                     <p>Nama: <span id="sender-name-input"></span></p>
                     <p>Tanggal Lahir: <span id="sender-birthday"></span></p>
@@ -171,5 +196,8 @@
         </div>
     </main>
     <!--Footer-->
+    <footer>
+        <p>Copyright © 2023 Natalis Hurang. All Rights Reserved</p>
+    </footer>
 </body>
 </html>
